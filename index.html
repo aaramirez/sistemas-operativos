@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistemas operativos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Qué hace el núcleo entre tus programas y el hardware: procesos e hilos, planificación, sincronización, interbloqueos, memoria virtual, sistemas de archivos, entrada y salida, virtualización y contenedores, con un sistema operativo de juguete que crece en la página.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="index">
+<header class="topbar"><a class="brand" href="index.html">Sistemas <b>operativos</b></a><span class="eyebrow">Curso visual e interactivo · Computación</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+
+<header class="hero">
+  <span class="eyebrow">Curso visual e interactivo · Computación</span>
+  <h1>Un sistema operativo que se arma frente a ti, pieza por pieza</h1>
+  <p class="lede">Cada programa cree que tiene el procesador, la memoria y el disco para él solo. Esa ilusión la sostiene el núcleo, que reparte el tiempo, traduce direcciones, ordena el acceso a los datos compartidos y aísla a unos programas de otros. Este curso la desarma: en cada capítulo un simulador muestra el mecanismo por dentro y una práctica lo encuentra en tu propio computador.</p>
+</header>
+
+<section>
+  <h2>Cómo usar este curso</h2>
+  <div class="prose">
+    <p><b>Estado.</b> El curso está en preparación. La <a href="temario.html">tabla de contenido</a> ya tiene los 14 capítulos con sus secciones y sus laboratorios, y está en revisión.</p>
+    <p><b>Para quién es.</b> Para estudiantes de computación y para quien programa y quiere entender qué pasa debajo de su código. Conviene saber programar en algún lenguaje y conocer el procesador, la caché y las interrupciones, que están en Arquitectura del computador. La terminal se usa desde el primer capítulo; lo básico está en Línea de comandos y PowerShell.</p>
+    <p><b>Cómo está hecho.</b> Un sistema operativo de juguete, simulado en la página, gana una pieza por capítulo: primero un cargador y llamadas al sistema, luego procesos, un planificador, cerrojos, memoria paginada, un sistema de archivos y, al final, contenedores. Los laboratorios dejan cambiar la política (el algoritmo de planificación, el de reemplazo de páginas, el orden de los cerrojos) y ver la consecuencia en un diagrama de Gantt, en la tabla de páginas o en un interbloqueo. Las prácticas, de solo lectura, se hacen en Linux, macOS y Windows, con una pestaña por sistema.</p>
+  </div>
+</section>
+
+<details class="stage" id="temario" open><summary><h2><span class="pn">Empieza aquí</span> Tabla de contenido</h2></summary>
+  <div class="mods">
+    <a class="mod" href="temario.html"><span class="n">≡</span><b>Tabla de contenido</b><p>Cada capítulo con sus secciones y sus laboratorios.</p></a>
+  </div>
+</details>
+
+<details class="stage" id="parte-1" open><summary><h2><span class="pn">Parte 1</span> El núcleo y sus fronteras</h2><span class="cuenta" data-etapa-cuenta="1"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="que-hace-un-sistema-operativo"><span class="n">01</span><b>Qué hace un sistema operativo</b><p>Un ilusionista y un árbitro: abstrae el hardware, reparte los recursos y protege a unos programas de otros.</p></div>
+    <div class="mod soon" data-id="llamadas-al-sistema"><span class="n">02</span><b>Llamadas al sistema: cruzar la frontera</b><p>Modo usuario y modo núcleo, trampas e interrupciones, y la interfaz POSIX y Win32 por la que pasa todo.</p></div>
+    <div class="mod soon" data-id="procesos"><span class="n">03</span><b>Procesos: un programa en ejecución</b><p>El bloque de control, los estados, `fork`, `exec` y `wait`, las señales y el árbol de procesos.</p></div>
+    <div class="mod soon" data-id="hilos"><span class="n">04</span><b>Hilos: varias ejecuciones en un mismo proceso</b><p>Qué comparten y qué no los hilos, hilos de usuario y de núcleo, y los modelos 1:1 y N:M.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-2" open><summary><h2><span class="pn">Parte 2</span> Compartir el procesador y coordinarse</h2><span class="cuenta" data-etapa-cuenta="2"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="planificacion"><span class="n">05</span><b>Planificación de la CPU</b><p>FCFS, SJF, Round Robin, prioridades y colas multinivel, hasta el planificador de Linux y el de Windows.</p></div>
+    <div class="mod soon" data-id="sincronizacion"><span class="n">06</span><b>Condiciones de carrera y cerrojos</b><p>La sección crítica, el algoritmo de Peterson, las instrucciones atómicas y cómo se construye un cerrojo.</p></div>
+    <div class="mod soon" data-id="semaforos-y-monitores"><span class="n">07</span><b>Semáforos, monitores y los problemas clásicos</b><p>Los semáforos de Dijkstra, las variables de condición y el productor-consumidor, lectores-escritores y los filósofos.</p></div>
+    <div class="mod soon" data-id="interbloqueos"><span class="n">08</span><b>Interbloqueos</b><p>Las cuatro condiciones de Coffman, el grafo de asignación, el algoritmo del banquero y la inversión de prioridad.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-3" open><summary><h2><span class="pn">Parte 3</span> Memoria, archivos y dispositivos</h2><span class="cuenta" data-etapa-cuenta="3"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="memoria-virtual"><span class="n">09</span><b>Memoria virtual y paginación</b><p>Direcciones virtuales y físicas, páginas y marcos, tablas de varios niveles y la TLB.</p></div>
+    <div class="mod soon" data-id="paginacion-bajo-demanda"><span class="n">10</span><b>Fallos de página y reemplazo</b><p>Cargar solo lo que se usa: fallos de página, FIFO, el óptimo de Bélády, LRU, el reloj y la hiperpaginación.</p></div>
+    <div class="mod soon" data-id="sistemas-de-archivos"><span class="n">11</span><b>Sistemas de archivos</b><p>Archivos, directorios e inodos, asignación de bloques, *journaling* y *copy-on-write*, de FAT a ext4, NTFS, APFS y ZFS.</p></div>
+    <div class="mod soon" data-id="entrada-y-salida"><span class="n">12</span><b>Entrada y salida y los controladores</b><p>Sondeo, interrupciones y DMA, controladores, planificación de disco, SSD y NVMe, y la E/S asíncrona.</p></div>
+  </div>
+</details>
+
+<details class="stage" id="parte-4" open><summary><h2><span class="pn">Parte 4</span> Aislar y proteger</h2><span class="cuenta" data-etapa-cuenta="4"></span></summary>
+  <div class="mods">
+    <div class="mod soon" data-id="virtualizacion-y-contenedores"><span class="n">13</span><b>Virtualización y contenedores por dentro</b><p>Hipervisores, el teorema de Popek y Goldberg, y los contenedores como procesos con *namespaces* y *cgroups*.</p></div>
+    <div class="mod soon" data-id="seguridad-del-sistema"><span class="n">14</span><b>Protección y seguridad del sistema operativo</b><p>Usuarios, permisos y listas de control, capacidades, ASLR, DEP, *sandboxing* y arranque seguro.</p></div>
+  </div>
+</details>
+
+
+
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/sistemas-operativos" target="_blank" rel="noopener">github.com/aaramirez/sistemas-operativos</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+</body>
+</html>
